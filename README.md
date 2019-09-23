@@ -24,7 +24,7 @@ import iso4217
 iso4217.get_list_of_currencies()
 ```
 
-To check is a currency code is valid:
+To check if a currency code is valid:
 
 ```python
 import iso4217
