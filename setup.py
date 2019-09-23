@@ -16,7 +16,7 @@ setup(
     python_requires=">=3.5.*",
     packages=["iso4217"],
     package_data={
-        "iso4217": ["*.csv"]
+        "iso4217": ["data/*.csv"]
     },
     classifiers=(
         "Programming Language :: Python :: 3.5",
