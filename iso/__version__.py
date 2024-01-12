@@ -2,8 +2,8 @@ from datetime import datetime
 
 current_year = datetime.utcnow().strftime("%Y")
 
-__title__ = "iso4217"
-__description__ = "This is an ISO 4217 standard table"
+__title__ = "iso"
+__description__ = "ISO 3166_1 and 4217 standards"
 __version__ = "0.1.0"
 __author__ = "Victor Natschke"
 __author_email__ = "vnatschke@gmail.com"
