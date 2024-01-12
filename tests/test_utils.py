@@ -15,9 +15,9 @@ def test_collection_finder():
     object_name = "Currency"
     code = "BDT"
 
-    o = CollectionFinder(["code"], filename, object_name)
-    currencies = o.get_all()
-    currency = o.search_by(code=code)
+    collection = CollectionFinder(["code"], filename, object_name)
+    currencies = collection.get_all()
+    currency = collection.search_by(code=code)
 
     assert isinstance(currencies, list)
     assert len(currencies) == 179

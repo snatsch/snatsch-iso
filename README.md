@@ -2,13 +2,6 @@
 
 A lightweight python library to retrieve countries and currencies based on ISO_3166-1 and ISO_4217 standards. This library was created despite of many others existing onces because it is lightweight, simple and easy to use.
 
-References:
-
-    - https://en.wikipedia.org/wiki/ISO_3166-1
-    - https://www.iso.org/obp/ui/#iso:code:3166:DO
-    - https://en.wikipedia.org/wiki/ISO_3166-2:DO
-    - https://en.wikipedia.org/wiki/ISO_4217
-
 ## Getting Started
 
 ```bash
@@ -54,7 +47,7 @@ iso4217.Currencies.search_by(num="50")
 Currency(code='BDT', num='50', d='2', currency='Bangladeshi taka', countries='Bangladesh')
 ```
 
-To retrieve information about a countries:
+Examples to retrieve information about countries:
 
 ```python
 from iso import iso3166
@@ -109,5 +102,11 @@ iso3166.DOSubdivisions.search_by(parent_subdivision="DO-33")
 Run this command in the root of the project:
 
 ```bash
-PYTHONPATH=${PWD} pytest -v tests
+pytest -vv
 ```
+
+## References:
+
+- [ISO_3166-1](https://en.wikipedia.org/wiki/ISO_3166-1)
+- [ISO_3166-2:DO](https://en.wikipedia.org/wiki/ISO_3166-2:DO)
+- [ISO_4217](https://en.wikipedia.org/wiki/ISO_4217)
