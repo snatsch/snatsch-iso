@@ -13,13 +13,14 @@ setup(
     name=info["__title__"],
     author_email=info["__author_email__"],
     license=info["__license__"],
-    python_requires=">=3.7.*",
+    python_requires=">=3.8.*",
     packages=["iso"],
     package_data={"iso": ["data/*.csv"]},
     classifiers=(
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
     ),
 )

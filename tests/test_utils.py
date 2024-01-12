@@ -1,18 +1,24 @@
-import pytest
-from iso4217.utils import get_currency, is_valid_currency
+from iso.utils import convert_csv_to_dict, CollectionFinder
 
 
-def test_get_currency():
-    assert get_currency("DOP")
+def test_convert_csv_to_dict():
+    filename = "4217.csv"
+    object_name = "Currency"
+    index_column = "code"
+
+    currencies = convert_csv_to_dict(filename, object_name, index_column)
+    assert isinstance(currencies, dict)
 
 
-def test_get_currency_with_invalid_currency():
-    assert get_currency("BLA") is None
+def test_collection_finder():
+    filename = "4217.csv"
+    object_name = "Currency"
+    code = "BDT"
 
+    o = CollectionFinder(["code"], filename, object_name)
+    currencies = o.get_all()
+    currency = o.search_by(code=code)
 
-def test_is_valid_currency():
-    assert is_valid_currency("DOP") == True
-
-
-def test_is_valid_currency_with_invalid_currency():
-    assert is_valid_currency("BLA") == False
+    assert isinstance(currencies, list)
+    assert len(currencies) == 179
+    assert currency.code == code
